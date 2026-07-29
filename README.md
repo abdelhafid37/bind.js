@@ -6,7 +6,7 @@
   <img src="./assets/cat-computer.gif" width="300" alt="Cat typing on a keyboard">
 </p>
 
-bind.js is a tiny, dependency-free JavaScript library that makes working with the DOM easier and more enjoyable.
+bind.js is a tiny, dependency-free JavaScript library that makes working with the DOM simpler and more enjoyable.
 
 **Currently under active development.**
 
