@@ -31,9 +31,35 @@
       if (Array.isArray(input)) return input.flatMap((item) => this.#normalize(item));
 
       throw new BindError(
-        `Invalid input passed to bind(),\nbind.js accepts:\n\tstring\n\tElement\n\tNodeList\n\tHTMLCollection\n\tarray of supported inputs`,
+        "Invalid input passed to bind(),\nbind.js accepts:\n\tstring\n\tElement\n\tNodeList\n\tHTMLCollection\n\tarray of supported inputs",
         "normalize",
       );
+    }
+
+    get length() {
+      return this.#elements.length;
+    }
+
+    get(index) {
+      if (index !== undefined && (typeof index !== "number" || isNaN(index)))
+        throw new BindError("Invalid index passed to Bind's get method", "get");
+
+      if (index === undefined || index >= this.length || index < -this.length) return;
+
+      return this.#elements.at(index);
+    }
+
+    getAll() {
+      return [...this.#elements];
+    }
+
+    each(callbackfn) {
+      if (callbackfn === undefined || typeof callbackfn !== "function")
+        throw new BindError("Invalid callback passed to Bind's each method", "each");
+
+      this.#elements.forEach((element, elementIndex) => callbackfn(element, elementIndex));
+
+      return this;
     }
   }
 

@@ -12,3 +12,7 @@ All notable changes to this project will be documented in this file.
 - Custom `BindError`.
 - Playground for manual testing.
 - Project documentation.
+- Collection length inspection.
+- Indexed raw element access with `get()`.
+- Full collection access with `getAll()`.
+- Collection iteration with `each()`.
