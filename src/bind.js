@@ -61,6 +61,25 @@
 
       return this;
     }
+
+    at(index) {
+      if (typeof index !== "number" || isNaN(index))
+        throw new BindError("Invalid index passed to Bind's at method", "at");
+
+      const element = this.get(index);
+
+      if (element === undefined) return new Bind();
+
+      return new Bind(element);
+    }
+
+    first() {
+      return this.at(0);
+    }
+
+    last() {
+      return this.at(-1);
+    }
   }
 
   function bind(input) {
