@@ -18,3 +18,5 @@ All notable changes to this project will be documented in this file.
 - Collection iteration with `each()`.
 - Indexed Bind selection with `at()`.
 - First and last element selection with `first()` and `last()`.
+- Parent element traversal with `parent()`.
+- Direct child element traversal with `children()`.

@@ -104,3 +104,31 @@ logger([
   // bind("div").last().length,
   // bind().last().length,
 ]);
+
+//? Colletcion Traversal - parent()
+logger([
+  // bind("div").parent(),
+  // bind("div").parent().length,
+  // bind("div").parent().get(0),
+  // bind("div").parent().get(-1),
+  // bind().parent().length,
+  // bind("div").parent().first(),
+  // bind("div").parent().children(),
+]);
+// const collection = bind("div");
+// const parent = bind("div").parent();
+// console.log(parent !== collection);
+
+//? Colletcion Traversal - children()
+logger([
+  // bind("div").children(),
+  // bind("div").children().length,
+  // bind("div").children().get(0),
+  // bind("div").children().get(-1),
+  // bind().children().length,
+  // bind("div").children().first(),
+  // bind("div").children().parent(),
+]);
+// const collection = bind("div");
+// const children = bind("div").children();
+// console.log(children !== collection);

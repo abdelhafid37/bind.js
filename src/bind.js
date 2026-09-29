@@ -80,6 +80,14 @@
     last() {
       return this.at(-1);
     }
+
+    parent() {
+      return new Bind(this.#elements.map((element) => element.parentElement));
+    }
+
+    children() {
+      return new Bind(this.#elements.flatMap((element) => element.children));
+    }
   }
 
   function bind(input) {
